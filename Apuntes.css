@@ -1,0 +1,100 @@
+.opaco{
+    height: 100%;
+    width: 100%;
+    background-color: #000a; /*esta es la transparencia*/
+}
+
+
+SI UN ELEMENTO NO ESTA DEFINIDO PARA UNA ETIQUETA INTENTARA TOMAR LA DEFINIDA EN LA JERARQUIA SIGUIENTE MAS ALTA
+
+LA PROPIEDAD DE PORCENTAJE SE DEFINE POR LA CAJA QUE LA CONTIENE, NO DE TODA LA PAGINA
+
+
+PROPIEDADES QUE SE LE PUEDEN APLICAR A LAS IMAGENES
+
+{
+    border-radius: %;  redondea la imagen;
+    filter:drop-shadow (0px 0px 15px #000); solo imagenes canal alfa png, imagenes sin forma ni fondo.
+}
+
+PROPIEDADES MAS COMUNES DE FUENTE
+
+{
+    font-family: ;
+    font-size: ;  tamano
+    font font-weight: ; grosor
+    font-style: ; inclinacion italica
+    text text-align: ; alineacion
+    font-weight: ; interlineado?
+    letter-spacing: ; espacio entre letras
+    text-transform: ; minus, mayus, etc.
+    text-shadow: ; agregar sombra al texto
+}
+
+Codigo para definir y agregar fuentes en CSS
+
+@font-face {
+font-family: nombre fuente;
+src: url("enlace archivo fuente") format ("truetype");
+font-weight: entre 100 y 900
+}
+
+AJUSTES DE IMAGEN COMO FONDO DE CAJA
+
+{
+    background-image: url() ;
+    background-size: ; % ajusta la imagen de fondo al width
+                        contain imagen una vez entera por lo menos
+                        cover la imagen se ajusta
+    background-position: ; center, left, px, etc
+    background-repeat
+    background-attachment: fixed este sirve para el efecto de fondo interactuando con el scroll
+}
+
+PROPIEDADES QUE SE PUEDEN APLICAR A LAS CAJAS
+content area donde se muestra elemento
+padding espacio entre borde y contenido
+border contorno de la caja
+margin espacio de separacion de la caja con otros elementos
+width ancho de la casa
+height altura
+border style siempre hay que definirlo primero
+border width grosor
+border color 
+border radius redondeo de bordes
+box sizing  content box tamaño sin contemplar padding ni margin border box no cambia tamaño de la caja
+TRANSFORM ROTATE GRADOS
+GRADIENTES
+background: linear-gradient(to right, blue, pink); (incluso se puede usar transparent, el to es para cambiar direccion del gradiente)
+radial-gradient desde el centro
+conic-gradient
+PERFECTO PARA RESALTAR TEXTO CLARO EN FONDO CLARO POR EJEMPLO
+SOMBRAS
+box-shadow: 20px 20px 50px 10px #000;
+corrH  corrV desenf expand color;
+
+
+UNIDADES DE MEDIDA CSS
+unidades absolutas
+px pixeles
+cm, mm, in para cosas que se imprimiran
+unidades relativas (diseño responsive)
+%  toma el valor respecto a su contenedor
+em toma fuente de elemento padre y se multiplica por el valor em mejor medida para textos TEXTO
+rem busca elemento raiz HTML o por defecto 16px en chrome TEXTO
+vh viewport height se ajusta al porcentaje de pantalla o vista disponible TAMAÑO CAJAS
+vw width TAMAÑO CAJAS
+
+volver  ../    carpeta especifica carpeta/carpeta/
+Ruta relativa para insertar documentos o elementos fuera del html
+
+
+FUNCION PARA CORREGIR ALINEACION DE NAV
+
+@media screen and (max-width: 400px) {
+
+    nav,
+    .row {
+        flex-direction: column;
+    }
+}

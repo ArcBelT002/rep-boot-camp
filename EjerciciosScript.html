@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Este for es un ciclo que suma valores de a 2 hasta que cumple una condicion
+    <script>
+        for (let f = 1; f <= 23; f = f + 2/*f++*/) {
+            document.write(f + "");
+            debugger;
+        }
+    </script>
+    <script>
+        function MayoriaDeEdad(Edad) {
+            if (Edad < 18) {
+                console.log("Vaya a estudiar mijo");
+            } else if (Edad <= 70) {
+                console.log("Puede tomarse unas polas");
+            } else
+                console.log("Tomelo con calma");
+        }
+        MayoriaDeEdad(17);
+    </script>
+    <script>
+        function compararNumeros(a, b) {
+            if (a > b) {
+                console.log("A es mayor que B");
+            } else if (a < b) {
+                console.log("B es mayor que A");
+            } else {
+                console.log("A y B son iguales");
+            }
+        }
+        compararNumeros(55, 40);
+    </script>
+    <script>
+        function compararValores(a, b, c) {
+            if (a >= b & a >= c) {
+                console.log("A es el mayor");
+            } else if (b >= a & b >= c) {
+                console.log("B es el mayor");
+            } else {
+                console.log("C es el mayor");
+            }
+        }
+        compararValores(30, 50, 50);
+    </script>
+
+</body>
+
+</html>
