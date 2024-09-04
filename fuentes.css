@@ -1,16 +1,16 @@
 @font-face {
     font-family: "PerMarker";
-    src: url("fuentes/PermanentMarker-Regular.ttf") format("truetype");
+    src: url("/PermanentMarker-Regular.ttf") format("truetype");
     font-weight: 900
 }
 
 @font-face {
     font-family: "Merienda";
-    src: url("fuentes/Merienda-VariableFont_wght.ttf") format("truetype");
+    src: url("/Merienda-VariableFont_wght.ttf") format("truetype");
     font-weight: 900
 }
 
 @font-face{
     font-family: "Quicksand";
-    src: url("fuentes/Quicksand-VariableFont_wght.ttf") format("truetype");
+    src: url("/Quicksand-VariableFont_wght.ttf") format("truetype");
 }

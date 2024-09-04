@@ -15,6 +15,7 @@
             debugger;
         }
     </script>
+    <br>
     <script>
         function MayoriaDeEdad(Edad) {
             if (Edad < 18) {
@@ -26,6 +27,7 @@
         }
         MayoriaDeEdad(17);
     </script>
+    <br>
     <script>
         function compararNumeros(a, b) {
             if (a > b) {
@@ -37,7 +39,9 @@
             }
         }
         compararNumeros(55, 40);
+        /*if seria si tal cosa, else if seria sino tal cosa, else seria entonces tal cosa, es la condicional de salida*/
     </script>
+    <br>
     <script>
         function compararValores(a, b, c) {
             if (a >= b & a >= c) {
@@ -49,6 +53,74 @@
             }
         }
         compararValores(30, 50, 50);
+        /*console.log es mostrar en la consola, el & es literalmente y*/
+
+        /*Simplificacion GPT
+    function compararValores(a, b, c) {
+        const mayor = (a >= b && a >= c) ? "A" : (b >= a && b >= c) ? "B" : "C"; ternario if mas corto
+        console.log(`${mayor} es el mayor`);
+    }
+    compararValores(30, 50, 50);*/
+    </script>
+    <br>
+    <script>
+        let nombre;
+        let edad;
+        nombre = prompt("Ingrese su nombre");
+        edad = prompt("ingrese su edad");
+        document.write("Hola " + nombre + " así que tienes " + edad + " años");
+        
+    /*let nombre, edad;*/
+    /*let es la definicion de la variable, creo que funciona como un "toma tal variable", promt es solicitar un valor ingresado por una ventana*/
+    </script>
+    <br>
+    <script>
+        let valor1;
+        let valor2;
+        valor1 = prompt("Ingrese primer numero");
+        valor2 = prompt("ingrese el segundo numero");
+        let suma = parseInt(valor1) + parseInt(valor2);
+        let producto = parseInt(valor1) * parseInt(valor2);
+        document.write("La suma es " + (suma) + " y el producto " + (producto) + ".");
+        /*parseInt es convertir el valor a entero, document.write es mostrar en pantalla*/
+    </script>
+    <br>
+    <script>
+        let x = 1;
+        let control = 25;
+        while (x <= 100) {
+            document.write(x);
+            document.write(" ");
+            x = x + 7; /*x++ es x= x+1*/
+
+        }
+        /*while mientras ocurra tal cosa haga lo siguiente*/
+    </script>
+    <script>
+        for (let y = 1; y <= 10; y++) {
+            for (let x = 1; x <= 10; x++)
+                document.write(x + " ")
+            document.write("<br>")
+        }
+        /*Este es un ejemplo de una "tabla" hecha con for*/
+    </script>
+    <script>
+        const tam = 10;
+        const range = [...Array(tam).keys()].map(i => i + 1); /*crear arreglo de numeros, lista correcion, lo que dice el array es hazme el arreglo de un tamaño de 10 con llaves que mapee y lleve las posiciones de 1 hasta la 10*/
+        for (const y of range) {
+            for (const x of range) {
+                if (x === 1 || x === tam || y === 1 || y === tam) {
+                    document.write("*");
+                } else {
+                    document.write("_");
+                }
+            }
+            document.write("<br>")
+        }
+        /*array ya vere, pero es como una lista, Const es una constante algo que no va a cambiar a lo largo de todo el codigo, hay palabras que son reservadas en el sistema*/
+    </script>
+    <script>
+
     </script>
 
 </body>
