@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "PerMarker";
+    src: url("/Fuentes/PermanentMarker-Regular.ttf") format("truetype");
+    font-weight: 900
+}
+
+@font-face {
+    font-family: "Merienda";
+    src: url("/Fuentes/Merienda-VariableFont_wght.ttf") format("truetype");
+    font-weight: 900
+}
+
+@font-face{
+    font-family: "Quicksand";
+    src: url("/Fuentes/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
