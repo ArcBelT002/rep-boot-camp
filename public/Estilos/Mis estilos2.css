@@ -1,12 +1,14 @@
 html {
     scroll-behavior: smooth;
+    background: linear-gradient(90deg,
+            rgb(0, 174, 197) -2%,
+            rgba(0, 255, 168, 1) 35%,
+            rgb(94, 0, 201) 100%);
 }
 
 Body {
     padding: 0em 25em 0em 5em;
     font-family: sans-serif;
-    background: linear-gradient(rgb(33, 185, 185), rgb(109, 19, 182));
-    background-color: none;
 }
 
 header {
@@ -17,35 +19,20 @@ header {
     z-index: 10000;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 191, 197, 0.473);
-}
-
 section {
     z-index: 499;
     height: auto;
     min-height: 55em;
-    min-width: 21.3em;
+    min-width: 22em;
     padding: 5em 0 4em 0;
     position: relative;
     top: 3.5em;
     margin: 0px 0px 55px 0px;
-    background-image: url("/Imagenes/FonSec.png");
+    background-image: url("/public/Imagenes/FonSec.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     box-sizing: border-box;
-}
-
-a {
-    font-family: PerMarker;
-    font-size: 1.1em;
-    margin: 0.7em 0.7em 0.7em 0.7em;
-    color: rgb(215, 171, 255);
-    text-decoration: none;
-    text-shadow: 0px 0px 20px rgb(0, 0, 0);
 }
 
 h1 {
@@ -54,8 +41,14 @@ h1 {
     margin: 0em;
     color: rgb(4, 235, 196);
     position: relative;
-    right: 0.4em;
-    top: -2em;
+    bottom: 1em;
+    right: 0.5em;
+}
+
+.h1m{
+    position: relative;
+    right: 0em;
+    bottom: 5em;
 }
 
 h3 {
@@ -68,10 +61,17 @@ h3 {
 
 h4 {
     font-family: Merienda;
-    font-size: 1.2em;
     margin: 0;
+    font-size: 1.2em;
     text-align: center;
     color: rgb(100, 255, 216);
+}
+
+.h4m{
+    text-align: justify;
+    position: relative;
+    left: -1em;
+    bottom: 4.3em;
 }
 
 p {
@@ -89,8 +89,6 @@ label {
     color: #9fff8c;
     display: inline-block;
     width: 5.5em;
-    font-size: 1.2em;
-    text-align: left;
     letter-spacing: 0.005em;
 }
 
@@ -107,7 +105,45 @@ input {
     text-align: left;
 }
 
-button {
+.btnN {
+    font-family: PerMarker;
+    color: rgb(215, 171, 255);
+    text-decoration: none;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    margin: 0px;
+    padding: 12.5px 7.5px 12.5px 7.5px;
+    display: flex;
+    max-width: 118px;
+    max-height: 50px;
+    min-width: 30px;
+    position: relative;
+    background-color: #6100bd;
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.navC {
+    font-family: PerMarker;
+    color: rgb(215, 171, 255);
+    text-decoration: none;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    font-size: 1em;
+}
+
+.btnN:hover {
+    background-color: #8400ff;
+    color: rgb(4, 235, 196);
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.btnF {
     position: relative;
     left: 3.5em;
     margin: 1em;
@@ -115,8 +151,13 @@ button {
     background-color: #6100bd;
     font-size: 1.6em;
     color: rgb(4, 235, 196);
-    text-align: left;
-    letter-spacing: 0.005em;
+    text-align: center;
+    align-items: center;
+}
+
+.btnF:hover {
+    background-color: #8400ff;
+    color: rgb(4, 235, 196);
 }
 
 .Csec {
@@ -126,15 +167,14 @@ button {
     height: 55.5em;
     margin: 0;
     padding: 0;
-    background: radial-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.349))
+    background: radial-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.349));
 }
 
 .Chead {
     margin: 0px 0px -50px 0px;
     padding: 20px;
-    width: 100%;
     height: 60px;
-    min-width: 21.3em;
+    min-width: 22em;
     background-color: rgba(73, 0, 209, 0.39);
     backdrop-filter: blur(3px);
     display: flex;
@@ -147,20 +187,19 @@ button {
 }
 
 .Chome {
-    padding: 3em 3em 0em 3em;
+    padding: 3em 0em 0em 3em;
     margin: 5em 0 2em 0;
     flex: 350px;
     width: auto;
     height: auto;
-    min-height: 25em;
     position: relative;
     bottom: 2.7em;
     z-index: 99;
-    background-size: cover;
     box-sizing: border-box;
     align-items: center;
     border-radius: 10px;
     background: linear-gradient(to right, rgb(97, 0, 189), rgba(0, 49, 94, 0));
+    background-size: cover;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -171,7 +210,9 @@ button {
     position: relative;
     bottom: 7.5em;
     z-index: 99;
-    background: linear-gradient(to left, rgba(98, 0, 189, 0), rgba(0, 128, 187, 0.658));
+    background: linear-gradient(to left,
+            rgba(98, 0, 189, 0),
+            rgba(0, 128, 187, 0.658));
     backdrop-filter: blur(2px);
     background-size: cover;
     box-sizing: border-box;
@@ -187,7 +228,9 @@ button {
     position: relative;
     bottom: -4em;
     z-index: 99;
-    background: linear-gradient(to left, rgba(98, 0, 189, 0.671), rgba(0, 128, 187, 0));
+    background: linear-gradient(to left,
+            rgba(98, 0, 189, 0.671),
+            rgba(0, 128, 187, 0));
     backdrop-filter: blur(2px);
     background-size: cover;
     box-sizing: border-box;
@@ -213,9 +256,9 @@ button {
 .Cfind {
     color: rgb(215, 171, 255);
     display: flex;
-    padding: 1em 1em em 3em;
+    padding: 1em 1em 1em 1em;
     width: auto;
-    height: 5em;
+    height: auto;
     z-index: 99;
     background-color: rgba(0, 77, 139, 0.726);
     background-size: cover;
@@ -223,7 +266,7 @@ button {
     box-sizing: border-box;
     position: relative;
     top: -9.5em;
-    align-items: center;
+    align-items: start;
     border-radius: 10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -281,21 +324,21 @@ button {
     border-radius: 20px;
 }
 
-.phm{
+.phm {
     font-family: Quicksand;
     font-size: 2em;
     text-align: justify;
     color: #9fff8c;
     position: relative;
     right: 0.75em;
-    top: 2em;
+    top: 1em;
 }
 
 .Himg {
-    width: 3em;
+    width: 2.75em;
     display: flex;
     position: relative;
-    left: 2em;
+    left: 0em;
 }
 
 .Hfimg {
@@ -317,6 +360,20 @@ button {
 .row {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.fNavh {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.fNavf {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .h2m {
@@ -325,7 +382,7 @@ button {
     color: rgb(188, 255, 101);
     text-shadow: #000000;
     position: relative;
-    right:0.2em;
+    right: 0.2em;
 }
 
 .h2m1 {
@@ -371,7 +428,150 @@ input:hover {
     color: rgb(4, 235, 196);
 }
 
-button:hover {
-    background-color: #8400ff;
-    color: rgb(4, 235, 196);
+
+
+@media (max-width: 1770px) {
+    .Chfimg {
+        background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
+        height: 30em;
+        width: 20em;
+        position: relative;
+        bottom: 3em;
+        left: 0em;
+        z-index: 102;
+        align-items: center;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 1615px) {
+    .Hfimg {
+        width: 15em;
+        position: relative;
+        right: 3em;
+        top: 7em;
+        z-index: 100;
+    }
+}
+
+/*
+@media(max-width: 1423px){
+    Label{
+
+    }
+}
+*/
+@media (max-width: 1265px) {
+
+    .Chfimg {
+        background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
+        height: 30em;
+        width: 20em;
+        position: relative;
+        bottom: 3em;
+        left: 1em;
+        z-index: 102;
+        align-items: center;
+        border-radius: 20px;
+    }
+
+    .Hfimg {
+        width: 15em;
+        position: relative;
+        right: 0em;
+        top: 7em;
+        z-index: 100;
+    }
+}
+
+@media (max-width: 1181px) {
+    .Ccard {
+        padding: 2em 2em 2em 2em;
+        height: 26em;
+        width: 17.9em;
+        position: relative;
+        left: 0.75em;
+        top: -9.4em;
+        border-radius: 20px;
+        background: rgba(61, 2, 110, 0.836);
+        backdrop-filter: blur(1px);
+        box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
+        box-sizing: border-box;
+    }
+
+    .Ccard1 {
+        padding: 2em 2em 2em 2em;
+        height: 26em;
+        width: 17.9em;
+        position: relative;
+        left: 0.75em;
+        top: -8em;
+        border-radius: 20px;
+        background: rgba(2, 88, 110, 0.836);
+        backdrop-filter: blur(1px);
+        box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 997px) {
+    input {
+        font-family: Quicksand;
+        font-size: 1.1em;
+        position: relative;
+        left: 0em;
+        height: 1.2em;
+        font-style: italic;
+        background-color: #a871ff77;
+        font-size: 1.5em;
+        color: rgba(0, 255, 255, 0.623);
+        text-align: left;
+    }
+
+    .inp3 {
+        width: auto;
+        margin: 0.5em 0 0 0;
+        position: relative;
+        left: 0em;
+        height: 3em;
+        font-style: italic;
+        background-color: #a871ff77;
+        font-size: 1.6em;
+        color: rgba(0, 255, 255, 0.623);
+        text-align: left;
+    }
+}
+
+@media(max-width: 955px){
+    .fNavh {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: none;
+        position: relative;
+        top: 4.7em;
+    }
+    .btnN {
+        font-family: PerMarker;
+        color: rgb(215, 171, 255);
+        text-decoration: none;
+        text-shadow: 0px 0px 20px rgb(0, 0, 0);
+        margin: 0;
+        padding: 12.5px 7.5px 12.5px 7.5px;
+        display: flex;
+        max-width: auto;
+        max-height: auto;
+        position: relative;
+        background-color: none;
+        font-size: 1em;
+        align-items: flex-start;
+    }
+    .fNavf {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: none;
+        position: relative;
+        top: 0em;
+    }
 }
