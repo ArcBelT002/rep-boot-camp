@@ -71,7 +71,7 @@ p {
     font-family: Quicksand;
     font-size: 1.1em;
     text-align: justify;
-    color: #9fff8c;
+    color: #97ff20;
 }
 
 label {
@@ -344,12 +344,13 @@ input::placeholder {
     border-radius: 20px;
     background: rgba(61, 2, 110, 0.836);
     backdrop-filter: blur(1px);
-    
     box-sizing: border-box;
+    transition:450ms ease all;
 }
 .Ccard:hover{
     box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
     transform: translateY(-3%);
+    transition:450ms ease all;
 }
 
 .Ccard1 {
@@ -363,17 +364,19 @@ input::placeholder {
     background: rgba(2, 88, 110, 0.836);
     backdrop-filter: blur(1px);
     box-sizing: border-box;
+    transition:450ms ease all;
 }
 
 .Ccard1:hover{
     box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
     transform: translateY(-10%);
+    transition:450ms ease all;
 }
 
 .Cfoot {
     min-width: 20em;
     position: relative;
-    bottom: -3.8em;
+    bottom: -1em;
     background-color: rgba(52, 0, 100, 0.801);
     backdrop-filter: blur(2px);
     display: flex;
