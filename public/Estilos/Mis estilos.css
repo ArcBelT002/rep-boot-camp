@@ -88,7 +88,7 @@ input::placeholder {
     color: #00fff2;
     opacity: 0.6;
 }
-
+/*HEADER*/
 .Chead {
     min-width: 22em;
     height: 60px;
@@ -114,7 +114,7 @@ input::placeholder {
     box-sizing: border-box;
 }
 
-.Imgh{
+.imgCfigh{
     height: 3em;
     width: 3em;
 }
@@ -127,7 +127,7 @@ input::placeholder {
     top: 0.5em;
 }
 
-.btnN {
+.btnNh {
     box-sizing: content-box;
     font-family: PerMarker;
     color: rgb(215, 171, 255);
@@ -139,13 +139,13 @@ input::placeholder {
     font-size: 1.3em;
 }
 
-.btnN:hover {
+.btnNh:hover {
     background-color: #8400ff;
     color: rgb(4, 235, 196);
 }
 
-.btnN:before,
-.btnN:after {
+.btnNh:before,
+.btnNh:after {
     content: "";
     position: absolute;
     top: 0;
@@ -156,19 +156,25 @@ input::placeholder {
     transition: 400ms ease all;
 }
 
-.btnN:after {
+.btnNh:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-.btnN:hover:before,
-.btnN:hover:after {
+.btnNh:hover:before,
+.btnNh:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
+/*HEADER*/
+/*INICIO*/
 
+
+
+
+/*INICIO*/
 
 
 
@@ -610,7 +616,7 @@ input:hover {
         top: 0.5em;
     }
     
-    .btnN {
+    .btnNh {
     box-sizing: content-box;
     font-family: PerMarker;
     color: rgb(215, 171, 255);
@@ -620,11 +626,5 @@ input:hover {
     position: relative;
     background-color: #6100bd;
     font-size: 1.3em;
-    }
-
-    .fNavf {
-        background-color: none;
-        position: relative;
-        top: 0em;
     }
 }
