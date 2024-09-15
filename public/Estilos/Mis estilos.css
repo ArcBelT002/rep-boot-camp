@@ -3,7 +3,7 @@ html {
     background: linear-gradient(90deg,
             rgb(0, 174, 197) -2%,
             rgba(0, 255, 168, 1) 35%,
-            rgb(94, 0, 201) 100%);
+            rgb(30, 255, 0) 100%);
 }
 
 Body {
@@ -11,16 +11,8 @@ Body {
     font-family: sans-serif;
 }
 
-header {
-    box-sizing: border-box;
-    min-width: 20em;
-    background-color: none;
-    position: relative;
-    z-index: 10000;
-}
-
 section {
-    z-index: 499;
+    z-index: 99;
     height: auto;
     min-height: 55em;
     min-width: 22em;
@@ -43,12 +35,6 @@ h1 {
     position: relative;
     bottom: 1em;
     right: 0.5em;
-}
-
-.h1m {
-    position: relative;
-    right: 0em;
-    bottom: 5em;
 }
 
 h3 {
@@ -103,16 +89,115 @@ input::placeholder {
     opacity: 0.6;
 }
 
+.Chead {
+    min-width: 22em;
+    height: 60px;
+    margin: 0px 0px -50px 0px;
+    padding: 0.5rem;
+    background-color: rgba(73, 0, 209, 0.39);
+    backdrop-filter: blur(3px);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    gap: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.Cfigh{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -1em;
+    left: -0.5em;
+    box-sizing: border-box;
+}
+
+.Imgh{
+    height: 3em;
+    width: 3em;
+}
+
+.Cnavh {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+.btnN {
+    box-sizing: content-box;
+    font-family: PerMarker;
+    color: rgb(215, 171, 255);
+    text-decoration: none;
+    margin: 0px;
+    padding: 0.35em 0.5em 0.30em 0.5em;
+    position: relative;
+    background-color: #6100bd;
+    font-size: 1.3em;
+}
+
+.btnN:hover {
+    background-color: #8400ff;
+    color: rgb(4, 235, 196);
+}
+
+.btnN:before,
+.btnN:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: rgb(4, 235, 196);
+    transition: 400ms ease all;
+}
+
+.btnN:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btnN:hover:before,
+.btnN:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.h1m {
+    position: relative;
+    right: 0em;
+    bottom: 5em;
+}
+
 .btnF {
     font-family: PerMarker;
-    background:#6800df;
-    color:rgb(232, 175, 255);
-    border:none;
+    background: #6800df;
+    color: rgb(232, 175, 255);
+    border: none;
     width: 150px;
-    height:55px;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
+    height: 55px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
     position: relative;
     left: 3.1em;
     margin: 1em;
@@ -127,29 +212,30 @@ input::placeholder {
     color: rgb(4, 235, 196);
 }
 
-.btnF:before,.btnF:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background:rgb(4, 235, 196);
-    transition:400ms ease all;
-  }
+.btnF:before,
+.btnF:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: rgb(4, 235, 196);
+    transition: 400ms ease all;
+}
 
-  .btnF:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
+.btnF:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
 
-  .btnF:hover:before,.btnF:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
-
+.btnF:hover:before,
+.btnF:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
 
 .h4m {
     text-align: justify;
@@ -158,53 +244,6 @@ input::placeholder {
     bottom: 4.3em;
 }
 
-.btnN {
-    font-family: PerMarker;
-    color: rgb(215, 171, 255);
-    text-decoration: none;
-    text-shadow: 0px 0px 20px rgb(0, 0, 0);
-    margin: 0px;
-    padding: 12.5px 7.5px 12.5px 7.5px;
-    display: flex;
-    max-width: 118px;
-    max-height: 50px;
-    min-width: 30px;
-    position: relative;
-    background-color: #6100bd;
-    font-size: 1em;
-    text-align: center;
-    align-items: center;
-}
-
-.btnN:hover {
-    background-color: #8400ff;
-    color: rgb(4, 235, 196);
-}
-
-.btnN:before,.btnN:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background:rgb(4, 235, 196);
-    transition:400ms ease all;
-  }
-
-  .btnN:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-
-  .btnN:hover:before,.btnN:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
-
-
 .navC {
     font-family: PerMarker;
     color: rgb(215, 171, 255);
@@ -212,12 +251,11 @@ input::placeholder {
     text-shadow: 0px 0px 20px rgb(0, 0, 0);
     margin: 0;
     padding: 0;
-    display: flex;
     position: relative;
     font-size: 1em;
 }
 
-.navC:hover{
+.navC:hover {
     background-color: #8400ff;
     color: rgb(0, 255, 255);
     transform: scale(1.05);
@@ -233,26 +271,9 @@ input::placeholder {
     background: radial-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.349));
 }
 
-.Chead {
-    margin: 0px 0px -50px 0px;
-    padding: 20px;
-    height: 60px;
-    min-width: 22em;
-    background-color: rgba(73, 0, 209, 0.39);
-    backdrop-filter: blur(3px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    position: sticky;
-    top: 0;
-}
-
 .Chome {
     padding: 3em 0em 0em 3em;
     margin: 5em 0 2em 0;
-    flex: 350px;
     width: auto;
     height: auto;
     position: relative;
@@ -268,7 +289,6 @@ input::placeholder {
 
 .Ccal1 {
     padding: 5em 3em 7em 3em;
-    flex: 350px;
     height: auto;
     position: relative;
     bottom: 7.5em;
@@ -286,7 +306,6 @@ input::placeholder {
 
 .Ccal2 {
     padding: 7em 3em 5em 3em;
-    flex: 350px;
     height: auto;
     position: relative;
     bottom: -4em;
@@ -318,7 +337,6 @@ input::placeholder {
 
 .Cfind {
     color: rgb(215, 171, 255);
-    display: flex;
     padding: 1em 1em 1em 1em;
     width: auto;
     height: auto;
@@ -345,12 +363,13 @@ input::placeholder {
     background: rgba(61, 2, 110, 0.836);
     backdrop-filter: blur(1px);
     box-sizing: border-box;
-    transition:450ms ease all;
+    transition: 450ms ease all;
 }
-.Ccard:hover{
+
+.Ccard:hover {
     box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
     transform: translateY(-3%);
-    transition:450ms ease all;
+    transition: 450ms ease all;
 }
 
 .Ccard1 {
@@ -364,13 +383,13 @@ input::placeholder {
     background: rgba(2, 88, 110, 0.836);
     backdrop-filter: blur(1px);
     box-sizing: border-box;
-    transition:450ms ease all;
+    transition: 450ms ease all;
 }
 
-.Ccard1:hover{
+.Ccard1:hover {
     box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
     transform: translateY(-10%);
-    transition:450ms ease all;
+    transition: 450ms ease all;
 }
 
 .Cfoot {
@@ -379,7 +398,6 @@ input::placeholder {
     bottom: -1em;
     background-color: rgba(52, 0, 100, 0.801);
     backdrop-filter: blur(2px);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
@@ -408,13 +426,6 @@ input::placeholder {
     top: 1em;
 }
 
-.Himg {
-    width: 2.75em;
-    display: flex;
-    position: relative;
-    left: 0em;
-}
-
 .Hfimg {
     width: 15em;
     position: relative;
@@ -431,23 +442,7 @@ input::placeholder {
     z-index: 100;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.fNavh {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.fNavf {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
+.fNavf {}
 
 .h2m {
     font-family: PerMarker;
@@ -604,36 +599,30 @@ input:hover {
     }
 }
 
-@media (max-width: 955px) {
-    .fNavh {
+@media (max-width: 998px) {
+
+    .Cnavh {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        background-color: none;
-        position: relative;
-        top: 4.7em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
     }
-
+    
     .btnN {
-        font-family: PerMarker;
-        color: rgb(215, 171, 255);
-        text-decoration: none;
-        text-shadow: 0px 0px 20px rgb(0, 0, 0);
-        margin: 0;
-        padding: 12.5px 7.5px 12.5px 7.5px;
-        display: flex;
-        max-width: auto;
-        max-height: auto;
-        position: relative;
-        background-color: none;
-        font-size: 1em;
-        align-items: flex-start;
+    box-sizing: content-box;
+    font-family: PerMarker;
+    color: rgb(215, 171, 255);
+    text-decoration: none;
+    margin: 0px;
+    padding: 0.35em 0.5em 0.30em 0.5em;
+    position: relative;
+    background-color: #6100bd;
+    font-size: 1.3em;
     }
 
     .fNavf {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
         background-color: none;
         position: relative;
         top: 0em;
