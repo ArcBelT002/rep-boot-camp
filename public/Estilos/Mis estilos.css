@@ -1,3 +1,5 @@
+/*    transition: 800ms ease all;   USAR ESTA FUNCION PARA EL MOVIMIENTO SUAVIZADO DE ELEMENTO QUE CAMBIEN DE POSICION */
+
 html {
     scroll-behavior: smooth;
     background: linear-gradient(90deg,
@@ -11,30 +13,15 @@ Body {
     font-family: sans-serif;
 }
 
-section {
-    z-index: 99;
-    height: auto;
-    min-height: 55em;
-    min-width: 22em;
-    padding: 5em 0 4em 0;
-    position: relative;
-    top: 3.5em;
-    margin: 0px 0px 55px 0px;
-    background-image: url("/Imagenes/FonSec.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    box-sizing: border-box;
-}
-
 h1 {
     font-family: Merienda;
     font-size: 2.5em;
     margin: 0em;
     color: rgb(4, 235, 196);
     position: relative;
-    bottom: 1em;
+    top: 0.3em;
     right: 0.5em;
+    z-index: 101;
 }
 
 h3 {
@@ -62,20 +49,21 @@ p {
 
 label {
     font-family: Quicksand;
-    font-size: 1.1em;
-    margin: 1em 1.5em 0 0;
+    font-size: 1.3em;
+    margin: 0.5em 1.3em 1em 0.5em;
     text-align: left;
     color: #5eff00;
     display: inline-block;
     width: 5.5em;
-    letter-spacing: 0.005em;
+    letter-spacing: 0.01em;
+    transition: 800ms ease all;
 }
 
 input {
     font-family: Quicksand;
     font-size: 1.1em;
     position: relative;
-    left: -0.95em;
+    left: 0em;
     height: 1.2em;
     font-style: italic;
     background-color: #a871ff77;
@@ -84,12 +72,19 @@ input {
     text-align: left;
 }
 
+input:hover {
+    background-color: #8400ff;
+    color: rgb(4, 235, 196);
+}
+
 input::placeholder {
     color: #00fff2;
     opacity: 0.6;
 }
+
 /*HEADER*/
-.Chead {
+
+.chead {
     min-width: 22em;
     height: 60px;
     margin: 0px 0px -50px 0px;
@@ -105,7 +100,7 @@ input::placeholder {
     z-index: 100;
 }
 
-.Cfigh{
+.cfigh {
     display: flex;
     justify-content: center;
     position: relative;
@@ -114,38 +109,38 @@ input::placeholder {
     box-sizing: border-box;
 }
 
-.imgCfigh{
+.imgcfigh {
     height: 3em;
     width: 3em;
 }
 
-.Cnavh {
+.cnavh {
     display: flex;
     flex-direction: row;
     position: absolute;
     right: 0.5em;
-    top: 0.5em;
+    top: 0.3em;
 }
 
-.btnNh {
+.btnnh {
     box-sizing: content-box;
     font-family: PerMarker;
     color: rgb(215, 171, 255);
     text-decoration: none;
     margin: 0px;
-    padding: 0.35em 0.5em 0.30em 0.5em;
+    padding: 0.3em 0.5em 0.35em 0.5em;
     position: relative;
     background-color: #6100bd;
     font-size: 1.3em;
 }
 
-.btnNh:hover {
+.btnnh:hover {
     background-color: #8400ff;
     color: rgb(4, 235, 196);
 }
 
-.btnNh:before,
-.btnNh:after {
+.btnnh:before,
+.btnnh:after {
     content: "";
     position: absolute;
     top: 0;
@@ -156,91 +151,59 @@ input::placeholder {
     transition: 400ms ease all;
 }
 
-.btnNh:after {
+.btnnh:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-.btnNh:hover:before,
-.btnNh:hover:after {
+.btnnh:hover:before,
+.btnnh:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
+
 /*HEADER*/
 /*INICIO*/
 
-
-
-
-/*INICIO*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-.h1m {
+.csecini {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-image: url("/Imagenes/FonSec.png");
+    min-height: 60em;
+    min-width: 22em;
+    height: auto;
+    margin: 0px 0px 55px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
     position: relative;
-    right: 0em;
-    bottom: 5em;
+    top: 3.5em;
 }
 
-.btnF {
-    font-family: PerMarker;
-    background: #6800df;
-    color: rgb(232, 175, 255);
-    border: none;
-    width: 150px;
-    height: 55px;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    position: relative;
-    left: 3.1em;
-    margin: 1em;
-    padding: 5px 10px 5px 10px;
-    font-size: 1.6em;
-    text-align: center;
+.cin {
+    margin: 7.5em 0 0 0;
+    padding: 3em 0em 3em 3em;
+    width: auto;
+    height: 46em;
+    z-index: 94;
+    box-sizing: border-box;
     align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(97, 0, 189), rgba(0, 49, 94, 0));
+    background-size: cover;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btnF:hover {
-    background-color: #8400ff;
-    color: rgb(4, 235, 196);
-}
-
-.btnF:before,
-.btnF:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: rgb(4, 235, 196);
-    transition: 400ms ease all;
-}
-
-.btnF:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-.btnF:hover:before,
-.btnF:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
+.h2m {
+    font-family: PerMarker;
+    font-size: 5em;
+    color: rgb(188, 255, 101);
+    text-shadow: #000000;
+    position: relative;
+    right: 0.2em;
 }
 
 .h4m {
@@ -250,54 +213,75 @@ input::placeholder {
     bottom: 4.3em;
 }
 
-.navC {
-    font-family: PerMarker;
-    color: rgb(215, 171, 255);
-    text-decoration: none;
-    text-shadow: 0px 0px 20px rgb(0, 0, 0);
-    margin: 0;
-    padding: 0;
+.phm {
+    font-family: Quicksand;
+    font-size: 2em;
+    text-align: justify;
+    color: #9fff8c;
     position: relative;
-    font-size: 1em;
+    right: 0.75em;
+    top: 0em;
 }
 
-.navC:hover {
-    background-color: #8400ff;
-    color: rgb(0, 255, 255);
-    transform: scale(1.05);
-}
-
-.Csec {
-    z-index: 0;
-    position: relative;
-    top: -3.5em;
-    height: 55.5em;
+.chfimg {
     margin: 0;
-    padding: 0;
-    background: radial-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.349));
+    background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
+    position: relative;
+    top: 4em;
+    right: 7em;
+    height: 30em;
+    width: 20em;
+    z-index: 98;
+    justify-content: end;
+    border-radius: 20px;
+    z-index: 95;
 }
 
-.Chome {
-    padding: 3em 0em 0em 3em;
-    margin: 5em 0 2em 0;
-    width: auto;
+.hfimg {
+    margin: 0;
+    width: 17em;
+    position: relative;
+    right: 3em;
+    top: 5em;
+    z-index: 100;
+}
+
+/*INICIO*/
+/*CALIDAD*/
+
+.cseccal {
+    background-image: url("/Imagenes/FonSec.png");
+    min-height: 60em;
+    min-width: 22em;
     height: auto;
-    position: relative;
-    bottom: 2.7em;
-    z-index: 99;
-    box-sizing: border-box;
-    align-items: center;
-    border-radius: 10px;
-    background: linear-gradient(to right, rgb(97, 0, 189), rgba(0, 49, 94, 0));
+    margin: 0px 0px 55px 0px;
     background-size: cover;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    top: 3.5em;
 }
 
-.Ccal1 {
-    padding: 5em 3em 7em 3em;
+.gridcal {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.h2m1a {
+    font-family: Merienda;
+    color: rgb(188, 255, 101);
+    text-shadow: #000000;
+    background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    padding: 2em 2em 2em 2em;
+    position: relative;
+}
+
+.ccal1 {
+    padding: 3em 3em 7em 3em;
     height: auto;
     position: relative;
-    bottom: 7.5em;
+    top: -1em;
     z-index: 99;
     background: linear-gradient(to left,
             rgba(98, 0, 189, 0),
@@ -308,13 +292,14 @@ input::placeholder {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
 }
 
-.Ccal2 {
-    padding: 7em 3em 5em 3em;
+.ccal2 {
+    padding: 4em 3em 3em 3em;
     height: auto;
     position: relative;
-    bottom: -4em;
+    top: 7em;
     z-index: 99;
     background: linear-gradient(to left,
             rgba(98, 0, 189, 0.671),
@@ -324,9 +309,119 @@ input::placeholder {
     box-sizing: border-box;
     align-items: center;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
 }
 
-.Cform {
+/*CALIDAD*/
+/*SERVICIOS*/
+
+.csecser {
+    background-image: url("/Imagenes/FonSec.png");
+    min-height: 60em;
+    min-width: 22em;
+    height: auto;
+    padding: 5em 0 4em 0;
+    margin: 0px 0px 55px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    top: 3.5em;
+}
+
+.h2m1b {
+    font-family: Merienda;
+    color: rgb(188, 255, 101);
+    text-shadow: #000000;
+    background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    padding: 2em 2em 2em 2em;
+    position: relative;
+    top: -4.2em;
+}
+
+.cimg {
+    position: relative;
+    left: -2.39em;
+    height: 10em;
+    width: 14em;
+    z-index: 100;
+}
+
+.ccard {
+    margin: 2em 1.5em 2em 1.5em;
+    padding: 2em 2em 2em 2em;
+    height: 26em;
+    width: 17.9em;
+    position: relative;
+    top: -10em;
+    border-radius: 20px;
+    background: rgba(61, 2, 110, 0.836);
+    backdrop-filter: blur(1px);
+    box-sizing: border-box;
+    transition: 450ms ease all;
+}
+
+.ccard:hover {
+    box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
+    transform: translateY(-3%);
+    transition: 450ms ease all;
+}
+
+.ccard1 {
+    margin: 2em 1.5em 5em 1.5em;
+    padding: 2em 2em 2em 2em;
+    height: 26em;
+    width: 17.9em;
+    position: relative;
+    top: -5em;
+    border-radius: 20px;
+    background: rgba(2, 88, 110, 0.836);
+    backdrop-filter: blur(1px);
+    box-sizing: border-box;
+    transition: 450ms ease all;
+}
+
+.ccard1:hover {
+    box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
+    transform: translateY(-10%);
+    transition: 450ms ease all;
+}
+
+.gridser {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+/*SERVICIOS*/
+/*CONTACTO*/
+
+.cseccon {
+    background-image: url("/Imagenes/FonSec.png");
+    min-height: 60em;
+    min-width: 22em;
+    height: auto;
+    padding: 5em 0 4em 0;
+    margin: 0px 0px 55px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    top: 3.5em;
+}
+
+.h2m1c {
+    font-family: Merienda;
+    color: rgb(188, 255, 101);
+    text-shadow: #000000;
+    background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    padding: 2em 2em 2em 2em;
+    position: relative;
+    top: -4.2em;
+}
+
+.cform {
     top: -3em;
     margin: 0 0 0 0;
     padding: 2em 2em 0em 2em;
@@ -341,7 +436,76 @@ input::placeholder {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.Cfind {
+.btnf {
+    font-family: PerMarker;
+    background: #6800df;
+    color: rgb(232, 175, 255);
+    border: none;
+    width: 150px;
+    height: 55px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    position: relative;
+    margin: 1em;
+    padding: 5px 10px 5px 10px;
+    font-size: 1.6em;
+    text-align: center;
+    align-items: center;
+}
+
+.cbtnf {
+    position: relative;
+    top: -1.8em;
+    left: -0.8em;
+}
+
+.btnf:hover {
+    background-color: #8400ff;
+    color: rgb(4, 235, 196);
+}
+
+.btnf:before,
+.btnf:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: rgb(4, 235, 196);
+    transition: 400ms ease all;
+}
+
+.btnf:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btnf:hover:before,
+.btnf:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+.gridcform {
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
+
+.h2m1d {
+    font-family: Merienda;
+    color: rgb(188, 255, 101);
+    text-shadow: #000000;
+    background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    padding: 2em 2em 2em 2em;
+    position: relative;
+    top: -5.8em;
+}
+
+.cfind {
     color: rgb(215, 171, 255);
     padding: 1em 1em 1em 1em;
     width: auto;
@@ -358,256 +522,113 @@ input::placeholder {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.Ccard {
-    margin: 2em 1.5em 2em 1.5em;
-    padding: 2em 2em 2em 2em;
-    height: 26em;
-    width: 17.9em;
+.navc {
+    font-family: PerMarker;
+    color: rgb(215, 171, 255);
+    text-decoration: none;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
     position: relative;
-    top: -10em;
-    border-radius: 20px;
-    background: rgba(61, 2, 110, 0.836);
-    backdrop-filter: blur(1px);
-    box-sizing: border-box;
-    transition: 450ms ease all;
+    font-size: 1em;
 }
 
-.Ccard:hover {
-    box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
-    transform: translateY(-3%);
-    transition: 450ms ease all;
+.navc:hover {
+    background-color: #8400ff;
+    color: rgb(0, 255, 255);
+    transform: scale(1.05);
 }
 
-.Ccard1 {
-    margin: 2em 1.5em 5em 1.5em;
-    padding: 2em 2em 2em 2em;
-    height: 26em;
-    width: 17.9em;
+.gridcfind {
+    display: grid;
+    grid-template-columns: 25% 25%;
+}
+
+/*CONTACTO*/
+/*FOOTER*/
+
+.cfoot {
+    min-width: 22em;
     position: relative;
-    top: -5em;
-    border-radius: 20px;
-    background: rgba(2, 88, 110, 0.836);
-    backdrop-filter: blur(1px);
-    box-sizing: border-box;
-    transition: 450ms ease all;
-}
-
-.Ccard1:hover {
-    box-shadow: -0.5em 0.5em 0.5em rgba(91, 217, 255, 0.507);
-    transform: translateY(-10%);
-    transition: 450ms ease all;
-}
-
-.Cfoot {
-    min-width: 20em;
-    position: relative;
-    bottom: -1em;
+    bottom: 6em;
     background-color: rgba(52, 0, 100, 0.801);
     backdrop-filter: blur(2px);
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     box-sizing: border-box;
-}
-
-.Chfimg {
-    background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
-    height: 30em;
-    width: 20em;
-    position: relative;
-    bottom: 3em;
-    right: 10em;
-    z-index: 102;
-    align-items: center;
-    border-radius: 20px;
-}
-
-.phm {
-    font-family: Quicksand;
-    font-size: 2em;
-    text-align: justify;
-    color: #9fff8c;
-    position: relative;
-    right: 0.75em;
-    top: 1em;
-}
-
-.Hfimg {
-    width: 15em;
-    position: relative;
-    right: 6em;
-    top: 7em;
     z-index: 100;
 }
 
-.Cimg {
-    position: relative;
-    left: -2.39em;
-    height: 10em;
-    width: 14em;
-    z-index: 100;
+.fnavf {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
 }
 
-.fNavf {}
-
-.h2m {
+.btnnf {
+    box-sizing: content-box;
     font-family: PerMarker;
-    font-size: 5em;
-    color: rgb(188, 255, 101);
-    text-shadow: #000000;
+    color: rgb(215, 171, 255);
+    text-decoration: none;
+    margin: 0px;
+    padding: 0.3em 0.5em 0.35em 0.5em;
     position: relative;
-    right: 0.2em;
+    background-color: #6100bd;
+    font-size: 1.3em;
 }
 
-.h2m1 {
-    font-family: Merienda;
-    color: rgb(188, 255, 101);
-    text-shadow: #000000;
-    background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
-    padding: 2em 2em 2em 2em;
-    position: relative;
-    top: -4.2em;
-}
-
-.h2m2 {
-    font-family: Merienda;
-    color: rgb(188, 255, 101);
-    text-shadow: #000000;
-    background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
-    padding: 1.5em 2em 2em 2em;
-    position: relative;
-    top: -5.8em;
-}
-
-.inp3 {
-    width: auto;
-    margin: 0.5em 0 0 0;
-    position: relative;
-    left: -0.95em;
-    font-style: italic;
-    background-color: #a871ff77;
-    font-size: 1.6em;
-    color: rgba(0, 255, 255, 0.623);
-    text-align: left;
-}
-
-input:hover {
+.btnnf:hover {
     background-color: #8400ff;
     color: rgb(4, 235, 196);
 }
 
-@media (max-width: 1770px) {
-    .Chfimg {
-        background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
-        height: 30em;
-        width: 20em;
-        position: relative;
-        bottom: 3em;
-        left: 0em;
-        z-index: 102;
-        align-items: center;
-        border-radius: 20px;
-    }
+.btnnf:before,
+.btnnf:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: rgb(4, 235, 196);
+    transition: 400ms ease all;
 }
 
-@media (max-width: 1615px) {
-    .Hfimg {
-        width: 15em;
-        position: relative;
-        right: 3em;
-        top: 7em;
-        z-index: 100;
-    }
+.btnnf:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
 }
 
-/*
-@media(max-width: 1423px){
-    Label{
-
-    }
-}
-*/
-@media (max-width: 1265px) {
-    .Chfimg {
-        background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
-        height: 30em;
-        width: 20em;
-        position: relative;
-        bottom: 3em;
-        left: 1em;
-        z-index: 102;
-        align-items: center;
-        border-radius: 20px;
-    }
-
-    .Hfimg {
-        width: 15em;
-        position: relative;
-        right: 0em;
-        top: 7em;
-        z-index: 100;
-    }
+.btnnf:hover:before,
+.btnnf:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
 }
 
-@media (max-width: 1181px) {
-    .Ccard {
-        padding: 2em 2em 2em 2em;
-        height: 26em;
-        width: 17.9em;
-        position: relative;
-        left: 0.75em;
-        top: -9.4em;
-        border-radius: 20px;
-        background: rgba(61, 2, 110, 0.836);
-        backdrop-filter: blur(1px);
-        box-sizing: border-box;
-    }
-
-    .Ccard1 {
-        padding: 2em 2em 2em 2em;
-        height: 26em;
-        width: 17.9em;
-        position: relative;
-        left: 0.75em;
-        top: -8em;
-        border-radius: 20px;
-        background: rgba(2, 88, 110, 0.836);
-        backdrop-filter: blur(1px);
-        box-sizing: border-box;
-    }
+.imgcimgf {
+    position: relative;
+    bottom: -0.2em;
+    height: 1.5em;
+    width: 1.5em;
 }
 
-@media (max-width: 997px) {
-    input {
-        font-family: Quicksand;
-        font-size: 1.1em;
-        position: relative;
-        left: 0em;
-        height: 1.2em;
-        font-style: italic;
-        background-color: #a871ff77;
-        font-size: 1.5em;
-        color: rgba(0, 255, 255, 0.623);
-        text-align: left;
-    }
-
-    .inp3 {
-        width: auto;
-        margin: 0.5em 0 0 0;
-        position: relative;
-        left: 0em;
-        height: 3em;
-        font-style: italic;
-        background-color: #a871ff77;
-        font-size: 1.6em;
-        color: rgba(0, 255, 255, 0.623);
-        text-align: left;
-    }
+.gridfoot {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+/*FOOTER*/
+/*MEDIA QUERIES*/
 
 @media (max-width: 998px) {
-
-    .Cnavh {
+    .cnavh {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -615,16 +636,221 @@ input:hover {
         right: 0.5em;
         top: 0.5em;
     }
-    
-    .btnNh {
-    box-sizing: content-box;
-    font-family: PerMarker;
-    color: rgb(215, 171, 255);
-    text-decoration: none;
-    margin: 0px;
-    padding: 0.35em 0.5em 0.30em 0.5em;
-    position: relative;
-    background-color: #6100bd;
-    font-size: 1.3em;
+
+    .btnnh {
+        box-sizing: content-box;
+        font-family: PerMarker;
+        color: rgb(215, 171, 255);
+        text-decoration: none;
+        margin: 0px;
+        padding: 0.35em 0.5em 0.3em 0.5em;
+        position: relative;
+        background-color: #6100bd;
+        font-size: 1.3em;
+    }
+
+    .fnavf {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: absolute;
+        right: 0.5em;
+        top: -9.5em;
     }
 }
+
+@media (max-width: 1210px) {
+    .csecini {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-image: url("/Imagenes/FonSec.png");
+        height: 87.5em;
+        margin: 0px 0px 55px 0px;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        position: relative;
+        top: 3.5em;
+    }
+
+    .cin {
+        margin: 7.5em 0 0 0;
+        padding: 3em 0em 3em 3em;
+        width: auto;
+        height: 50em;
+        z-index: 94;
+        box-sizing: border-box;
+        align-items: center;
+        border-radius: 10px;
+        background: linear-gradient(to right, rgb(97, 0, 189), rgba(0, 49, 94, 0));
+        background-size: cover;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .chfimg {
+        margin: 0;
+        background: linear-gradient(to left, rgb(0, 255, 21), rgba(0, 49, 94, 0));
+        position: relative;
+        top: 0em;
+        right: 0em;
+        height: 30em;
+        width: auto;
+        z-index: 98;
+        border-radius: 0;
+    }
+
+    .hfimg {
+        margin: 0;
+        width: 17em;
+        position: absolute;
+        align-items: center;
+        z-index: 100;
+    }
+}
+
+@media (max-width: 1262px) {
+    .gridcal {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .ccal1 {
+        padding: 4em 3em 3em 3em;
+        height: auto;
+        position: relative;
+        top: -1.4em;
+        z-index: 99;
+        background: linear-gradient(to left,
+                rgba(98, 0, 189, 0),
+                rgba(0, 128, 187, 0.658));
+        backdrop-filter: blur(2px);
+        background-size: cover;
+        box-sizing: border-box;
+        align-items: center;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        font-size: 1.2em;
+    }
+
+    .ccal2 {
+        padding: 4em 3em 3em 3em;
+        height: auto;
+        position: relative;
+        top: -1.4em;
+        z-index: 99;
+        background: linear-gradient(to left,
+                rgba(98, 0, 189, 0.671),
+                rgba(0, 128, 187, 0));
+        backdrop-filter: blur(2px);
+        background-size: cover;
+        box-sizing: border-box;
+        align-items: center;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1870px) {
+    .gridser {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+}
+
+@media (max-width: 1510px) {
+    .gridser {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .ccard1 {
+        margin: 2em 1.5em 5em 1.5em;
+        padding: 2em 2em 2em 2em;
+        height: 26em;
+        width: 17.9em;
+        position: relative;
+        left: -1em;
+        top: -5em;
+        border-radius: 20px;
+        background: rgba(2, 88, 110, 0.836);
+        backdrop-filter: blur(1px);
+        box-sizing: border-box;
+        transition: 450ms ease all;
+    }
+}
+
+@media (max-width: 1150px) {
+    .gridser {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .ccard {
+        margin: 2em 1.5em 0em 1.5em;
+        padding: 2em 2em 2em 2em;
+        height: 26em;
+        width: 17.9em;
+        position: relative;
+        left: 0.6em;
+        top: -10em;
+        border-radius: 20px;
+        background: rgba(61, 2, 110, 0.836);
+        backdrop-filter: blur(1px);
+        box-sizing: border-box;
+        transition: 450ms ease all;
+    }
+
+    .ccard1 {
+        margin: 0em 1.5em 5em 1.5em;
+        padding: 2em 2em 2em 2em;
+        height: 26em;
+        width: 17.9em;
+        position: relative;
+        left: 0.7em;
+        top: -6em;
+        border-radius: 20px;
+        background: rgba(2, 88, 110, 0.836);
+        backdrop-filter: blur(1px);
+        box-sizing: border-box;
+        transition: 450ms ease all;
+    }
+}
+
+@media (max-width: 1668px) {
+
+    .cbtnf {
+        position: relative;
+        top: 0.8em;
+        left: -1.5em;
+    }
+}
+
+@media (max-width: 1335px) {
+    .gridcform {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .gridcfind {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .cbtnf {
+        position: relative;
+        top: -0.5em;
+        left: -1em;
+    }
+}
+
+@media (max-width: 1015px) {
+    .cbtnf {
+        position: relative;
+        top: 0em;
+        left: 2.5em;
+    }
+}
+
+/*MEDIA QUERIES*/
