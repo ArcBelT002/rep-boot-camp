@@ -1,15 +1,15 @@
-/*    transition: 800ms ease all;   USAR ESTA FUNCION PARA EL MOVIMIENTO SUAVIZADO DE ELEMENTO QUE CAMBIEN DE POSICION */
+/*    transition: 800ms ease all;   USAR ESTA FUNCION PARA EL MOVIMIENTO SUAVIZADO DE ELEMENTOS QUE CAMBIEN DE POSICION */
 
 html {
     scroll-behavior: smooth;
     background: linear-gradient(90deg,
             rgb(0, 174, 197) -2%,
             rgba(0, 255, 168, 1) 35%,
-            rgb(30, 255, 0) 100%);
+            rgb(119, 0, 255) 100%);
 }
 
 Body {
-    padding: 0em 26em 0em 4em;
+    padding: 0em 14em 0em 4em;
     font-family: sans-serif;
 }
 
@@ -43,7 +43,7 @@ h4 {
 p {
     font-family: Quicksand;
     font-size: 1.1em;
-    text-align: justify;
+    text-align: left;
     color: #97ff20;
 }
 
@@ -171,7 +171,7 @@ input::placeholder {
     display: grid;
     grid-template-columns: 70% 30%;
     background-image: url("/Imagenes/FonSec.png");
-    min-height: 60em;
+    min-height: 55.5em;
     min-width: 22em;
     height: auto;
     margin: 0px 0px 55px 0px;
@@ -251,7 +251,7 @@ input::placeholder {
 
 .cseccal {
     background-image: url("/Imagenes/FonSec.png");
-    min-height: 60em;
+    min-height: 55.5em;
     min-width: 22em;
     height: auto;
     margin: 0px 0px 55px 0px;
@@ -317,7 +317,7 @@ input::placeholder {
 
 .csecser {
     background-image: url("/Imagenes/FonSec.png");
-    min-height: 60em;
+    min-height: 55.5em;
     min-width: 22em;
     height: auto;
     padding: 5em 0 4em 0;
@@ -349,7 +349,7 @@ input::placeholder {
 }
 
 .ccard {
-    margin: 2em 1.5em 2em 1.5em;
+    margin: 0 auto;
     padding: 2em 2em 2em 2em;
     height: 26em;
     width: 17.9em;
@@ -369,7 +369,7 @@ input::placeholder {
 }
 
 .ccard1 {
-    margin: 2em 1.5em 5em 1.5em;
+    margin: 0 auto;
     padding: 2em 2em 2em 2em;
     height: 26em;
     width: 17.9em;
@@ -391,6 +391,8 @@ input::placeholder {
 .gridser {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    position: relative;
+    top: 3em;
 }
 
 /*SERVICIOS*/
@@ -398,7 +400,7 @@ input::placeholder {
 
 .cseccon {
     background-image: url("/Imagenes/FonSec.png");
-    min-height: 60em;
+    min-height: 55.5em;
     min-width: 22em;
     height: auto;
     padding: 5em 0 4em 0;
@@ -502,7 +504,7 @@ input::placeholder {
     background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
     padding: 2em 2em 2em 2em;
     position: relative;
-    top: -5.8em;
+    top: -5.9em;
 }
 
 .cfind {
@@ -550,7 +552,7 @@ input::placeholder {
 .cfoot {
     min-width: 22em;
     position: relative;
-    bottom: 6em;
+    bottom: 0em;
     background-color: rgba(52, 0, 100, 0.801);
     backdrop-filter: blur(2px);
     justify-content: space-between;
@@ -558,6 +560,7 @@ input::placeholder {
     padding: 0.5rem;
     box-sizing: border-box;
     z-index: 100;
+    position: sticky;
 }
 
 .fnavf {
@@ -648,14 +651,14 @@ input::placeholder {
         background-color: #6100bd;
         font-size: 1.3em;
     }
+}
 
-    .fnavf {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        position: absolute;
-        right: 0.5em;
-        top: -9.5em;
+@media (max-width: 1480px) {
+
+    .cbtnf {
+        position: relative;
+        top: 0.8em;
+        left: -1.5em;
     }
 }
 
@@ -752,78 +755,50 @@ input::placeholder {
     }
 }
 
-@media (max-width: 1870px) {
+@media (max-width: 1750px) {
     .gridser {
         display: grid;
         grid-template-columns: 33.3% 33.3% 33.3%;
+        place-items: center;
     }
 }
 
-@media (max-width: 1510px) {
+@media (max-width: 1435px) {
     .gridser {
         display: grid;
         grid-template-columns: 50% 50%;
+        place-items: center;
+    }
+
+    .ccard {
+        margin: 1.5em;
     }
 
     .ccard1 {
-        margin: 2em 1.5em 5em 1.5em;
-        padding: 2em 2em 2em 2em;
-        height: 26em;
-        width: 17.9em;
-        position: relative;
-        left: -1em;
-        top: -5em;
-        border-radius: 20px;
-        background: rgba(2, 88, 110, 0.836);
-        backdrop-filter: blur(1px);
-        box-sizing: border-box;
-        transition: 450ms ease all;
+        margin: 1.5em;
     }
+
 }
 
 @media (max-width: 1150px) {
     .gridser {
         display: grid;
         grid-template-columns: 100%;
+        place-items: center;
     }
 
     .ccard {
-        margin: 2em 1.5em 0em 1.5em;
-        padding: 2em 2em 2em 2em;
-        height: 26em;
-        width: 17.9em;
-        position: relative;
-        left: 0.6em;
-        top: -10em;
-        border-radius: 20px;
-        background: rgba(61, 2, 110, 0.836);
-        backdrop-filter: blur(1px);
-        box-sizing: border-box;
-        transition: 450ms ease all;
+        margin: 0.5em;
     }
 
     .ccard1 {
-        margin: 0em 1.5em 5em 1.5em;
-        padding: 2em 2em 2em 2em;
-        height: 26em;
-        width: 17.9em;
+        margin: 0.5em;
         position: relative;
-        left: 0.7em;
-        top: -6em;
-        border-radius: 20px;
-        background: rgba(2, 88, 110, 0.836);
-        backdrop-filter: blur(1px);
-        box-sizing: border-box;
-        transition: 450ms ease all;
+        top: -10em;
     }
-}
 
-@media (max-width: 1668px) {
-
-    .cbtnf {
-        position: relative;
-        top: 0.8em;
-        left: -1.5em;
+    .ccard1:hover {
+        transform: translateY(-3%);
     }
 }
 
