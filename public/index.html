@@ -7,6 +7,7 @@
     <title>Arcbel Portafolio</title>
     <link rel="stylesheet" href="/Estilos/Mis estilos.css">
     <link rel="stylesheet" href="/Estilos/fuentes.css">
+    <script src="/Estilos/Codigo.js"></script>
 </head>
 
 <body>
@@ -96,19 +97,22 @@
                 <div class="gridcform">
                     <div>
                         <label for="Nombre">Tu nombre</label>
-                        <input type="text" id="Nombre" placeholder="Ingresa tu nombre" autocomplete="on">
+                        <input type="text" id="uNombre" placeholder="Ingresa tu nombre" autocomplete="on">
                     </div>
                     <div>
                         <label for="Email">Tu email</label>
-                        <input type="email" id="Email" placeholder="Ingresa tu email" autocomplete="on">
+                        <input type="email" id="uEmail" placeholder="Ingresa tu email" autocomplete="on">
                     </div>
                     <div>
                         <label for="Mensaje">Tu mensaje</label>
-                        <input type="text" id="Mensaje" placeholder="Hola, me gustaria contactarte..."
+                        <input type="text" id="uMensaje" placeholder="Hola, me gustaria contactarte..."
                             autocomplete="on">
                     </div>
                     <div class="cbtnf">
-                        <button class="btnf">Enviar</button>
+                        <button onclick="addUser()" class="btnf">Enviar</button>
+                    </div>
+                    <div>
+                    <pre id="portContactos" class="preDb"></pre>
                     </div>
                 </div>
             </form>
@@ -144,60 +148,7 @@
                 </article>
                 </nav>
             </div>
-            <div>
-                <div>
-                    <script>
-                        async function fetchUsers() {
-                            try {
-                                const response = await fetch('http://localhost:3000/user');
-                                const portContactos = await response.json();
-                                console.log(portContactos);
-                                document.getElementById('portContactos').innerText = JSON.stringify(portContactos, null, 2);
-                            } catch (error) {
-                                console.error('Error fetching Users:', error);
-                            }
-                        }
-
-                        async function addUser() {
-                            const userName = document.getElementById('userName').value;
-                            const role = document.getElementById('role').value;
-                            const user = { userName, role };
-
-                            try {
-                                const response = await fetch('http://localhost:3000/user', {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json'
-                                    },
-                                    body: JSON.stringify(user)
-                                });
-                                const newUser = await response.json();
-                                console.log('User added:', newUser);
-                                fetchUsers();
-                            } catch (error) {
-                                console.error('Error adding user:', error);
-                            }
-                        }
-
-                        document.addEventListener('DOMContentLoaded', fetchUsers);
-                    </script>
-                </div>
-                <section>
-                    <h1>CRUD con Express y MongoDB</h1>
-                    <div>
-                        <h2>Usuarios</h2>
-                        <pre id="portContactos"></pre>
-                    </div>
-                    <div>
-                        <h2>Añadir Usuario</h2>
-                        <input type="text" id="userName" placeholder="Nombre de usuario" autocomplete="on">
-                        <input type="text" id="role" placeholder="Rol" autocomplete="on">
-                        <button onclick="addUser()">Añadir</button>
-                    </div>
-                </section>
-            </div>
         </footer>
     </main>
 </body>
-
 </html>
