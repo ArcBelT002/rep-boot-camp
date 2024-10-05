@@ -31,4 +31,40 @@ async function addUser() {
     }
 }
 
+async function findUser() {
+    const searchKey = document.getElementById('clBusqueda').value;
+    try {
+        const response = await fetch('http://localhost:3000/user');
+        const users = await response.json();
+        const filteredUsers = users.filter(user => user.uNombre === searchKey || user.uEmail === searchKey);
+        if (filteredUsers.length > 0) {
+            console.log('User found:', filteredUsers);
+            document.getElementById('resBusqueda').innerText = JSON.stringify(filteredUsers, null, 2);
+        } else {
+            console.log('El usuario no está registrado');
+            document.getElementById('resBusqueda').innerText = 'El usuario no está registrado';
+        }
+    } catch (error) {
+        console.error('Error finding user:', error);
+    }
+}
+
+async function deleteUser() {
+    const elimUsuario = document.getElementById('elimUsuario').value;
+    try {
+        const response = await fetch(`http://localhost:3000/user/${elimUsuario}`, {
+            method: 'DELETE'
+        });
+        if (response.ok) {
+            console.log('User deleted');
+            fetchUsers();
+        } else {
+            console.error('Error deleting user:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error deleting user:', error);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', fetchUsers);
+

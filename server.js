@@ -3,17 +3,17 @@ const { MongoClient } = require("mongodb");
 const path = require("path");
 const express = require("express");
 const app = express();
-
 const uri = process.env.MONGODB_URI;
 const dbName = "arcDb";
 const collectionName = "portContactos";
 const endPoint = "/user";
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 let col;
+
+app.use(express.json());
 
 async function connectToDb() {
   const client = new MongoClient(uri);
@@ -52,17 +52,9 @@ app.route(endPoint + "/:name")
       res.status(500).json({ error: "Error obteniendo datos por nombre" });
     }
   })
-  .put(async (req, res) => {
-    try {
-      const result = await col.updateMany({ userName: req.params.name }, { $set: req.body });
-      res.json(req.body);
-    } catch (error) {
-      res.status(500).json({ error: "Error actualizando usuario" });
-    }
-  })
   .delete(async (req, res) => {
     try {
-      const result = await col.deleteMany({ userName: req.params.name });
+      const result = await col.deleteMany({ uNombre: req.params.name });
       res.json(result);
     } catch (error) {
       res.status(500).json({ error: "Error eliminando usuario" });

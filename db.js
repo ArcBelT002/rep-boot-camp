@@ -1,7 +1,7 @@
 const { MongoClient, ServerApiVersion } = require('mongodb'); 
-require('dotenv').config(); //IMPORTA CLIENTE PARA LA CONEXION CON LA BASE DE DATOS.
-const uri = process.env.MONGODB_URI;//DIRECCIONAMIENTO DE LA BASE DE DATOS.
-let col;//Variable para almacenar la colección de usuarios.
+require('dotenv').config();
+const uri = process.env.MONGODB_URI;
+let col;
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,

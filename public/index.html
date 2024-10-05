@@ -96,15 +96,15 @@
             <form class="cform">
                 <div class="gridcform">
                     <div>
-                        <label for="Nombre">Tu nombre</label>
+                        <label for="uNombre">Tu nombre</label>
                         <input type="text" id="uNombre" placeholder="Ingresa tu nombre" autocomplete="on">
                     </div>
                     <div>
-                        <label for="Email">Tu email</label>
+                        <label for="uEmail">Tu email</label>
                         <input type="email" id="uEmail" placeholder="Ingresa tu email" autocomplete="on">
                     </div>
                     <div>
-                        <label for="Mensaje">Tu mensaje</label>
+                        <label for="uMensaje">Tu mensaje</label>
                         <input type="text" id="uMensaje" placeholder="Hola, me gustaria contactarte..."
                             autocomplete="on">
                     </div>
@@ -112,8 +112,14 @@
                         <button onclick="addUser()" class="btnf">Enviar</button>
                     </div>
                     <div>
-                    <pre id="portContactos" class="preDb"></pre>
+                        <input id="clBusqueda" type="text" placeholder="Buscar por Nombre o Email">
+                        <button onclick="findUser()" class="btnf">Buscar</button>
                     </div>
+                    <div>
+                        <input id="elimUsuario" type="text" placeholder="Escribir usuario a eliminar">
+                        <button onclick="deleteUser()" class="btnf">Eliminar</button>
+                    </div>
+                    <pre id="resBusqueda" class="preDb"></pre>
                 </div>
             </form>
             <h2 class="h2m1d">Encuentrame aqui</h2>
